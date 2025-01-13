@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar eliminación</title>
+</head>
+<body>
+    <h3>Estás seguro de que deseas eliminar el laboratorio: "{{ laboratorio.nombre }}"?</h3>
+    <p><a href="{% url 'lista_laboratorios' %}"><-- Retornar</a></p> 
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Confirmar eliminación</button>
+    </form>
+</body>
+</html>

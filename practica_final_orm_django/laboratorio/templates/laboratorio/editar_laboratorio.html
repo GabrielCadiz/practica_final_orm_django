@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Laboratorio</title>
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Actualizar Laboratorio</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{ laboratorio.nombre }}" required>
+            
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" value="{{ laboratorio.ciudad }}" required>
+            
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" value="{{ laboratorio.pais }}" required>
+            
+            <input type="submit" value="Guardar Cambios">
+        </form>
+        <p><a href="{% url 'lista_laboratorios' %}">Volver a la lista de laboratorios</a></p>
+    </div>
+</body>
+</html>

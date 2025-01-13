@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Datos del Laboratorio</title>
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresar los Datos del Laboratorio</h1>
+        <form method="POST" action="{% url 'crear_laboratorio' %}">
+            {% csrf_token %}
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del laboratorio" required>
+            
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese la Ciudad del Laboratorio" required>
+            
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" placeholder="Ingrese el País del Laboratorio" required>
+            
+            <input type="submit" value="Enviar">
+        </form>
+        <p>¿Información de los Laboratorios?</p>
+        <a href="{% url 'lista_laboratorios' %}">Ir a información del los laboratorios--&gt;</a>
+    </div>
+</body>
+</html>

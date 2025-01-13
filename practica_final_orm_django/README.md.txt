@@ -19,8 +19,8 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
 ### **1. Clonar el repositorio**
 Clona este proyecto en tu máquina local:
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/GabrielCadiz/practica_final_orm_django.git
+cd practica_final_orm_django
 
 Es recomendable usar un entorno virtual para instalar las dependencias:
 
@@ -75,13 +75,3 @@ Para restaurar un respaldo de la base de datos, usa:
 pg_restore -U userdjango -d db_final_orm backup.sql
 
 Autor: Gabriel Cadiz Echeverria
-
-
-
-
-
-
-
-
-
-
